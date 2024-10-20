@@ -52,13 +52,12 @@ def main():
     mailPass = 'abc_clong'
     mailAddr1 = 'clong1688@hotmail.com'
     mailAddr2 = 'clong_abchina@hotmail.com'
-    while True:
-        try:
-            twitter = X('stateFiles/X.json')
-            twitter.get_timeline(mailAddr1,mailU,mailPass)
-            time.sleep(300)
-        except Exception as error:
-            logging.info(f'本轮自动运行X失败，报错如下：\n{error}')
+    try:
+        twitter = X('stateFiles/X.json')
+        twitter.get_timeline(mailAddr1,mailU,mailPass)
+        time.sleep(300)
+    except Exception as error:
+        logging.info(f'本轮自动运行X失败，报错如下：\n{error}')
 
 if __name__ == "__main__":
     main()
