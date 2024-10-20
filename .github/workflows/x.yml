@@ -11,6 +11,6 @@ jobs:
       - run: python3 -m venv .venv
       - run: source .venv/bin/activate
       - run: pip install -r requirements.txt
-      - run: playwright install
+      - run: playwright install --with-deps
       - run: python twitter-x.py
          
