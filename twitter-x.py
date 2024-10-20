@@ -43,7 +43,7 @@ class X():
                     logging.info(f'获取第{i}条tweet截图，tweet{i}.png')
                     page.screenshot(path=f'logs/tweet{i}.png',full_page=True)
                     zmailserver = zmail.server(mailU, mailP)
-                    zmailserver.send_mail(mailTo,{'subject':f'Tweet--{i}','attachments': [f'tweet{i}.png',]})
+                    zmailserver.send_mail(mailTo,{'subject':f'Tweet--{i}','attachments': [f'logs/tweet{i}.png',]})
         except Exception as error:
             logging.info(f'获取tweet失败，报错如下：\n{error}')
 
