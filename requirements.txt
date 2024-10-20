@@ -1,1 +1,2 @@
-
+zmail==0.2.8
+playwright==1.44.0
