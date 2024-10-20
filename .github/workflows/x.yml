@@ -24,4 +24,5 @@ jobs:
       - uses: actions/download-artifact@v4
         with:
           name: stateFiles
+          path: stateFiles/
       
